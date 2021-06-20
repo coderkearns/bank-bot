@@ -3,9 +3,8 @@ const Enmap = require("enmap")
 
 const app = express()
 
-// Enmap middleware
 app.use((req, res, next) => {
-  req.db = new Enmap("bank")
+  req.db = new Enmap("bank", { dataDir: "./data" })
   next()
 })
 
