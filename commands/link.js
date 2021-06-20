@@ -1,7 +1,8 @@
-const util = require("../util.js")
+const util = require("../util")
+const { url } = require("../config")
 
 function createLink(message) {
-  return `http://localhost:8080/${message.guild.id}/${message.author.id}/`
+  return `https://${url}/${message.guild.id}/${message.author.id}/`
 }
 
 module.exports = {

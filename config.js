@@ -1,5 +1,6 @@
 module.exports = {
   prefix: "!",
-  token: "ODQ4MjcyMDgxMDQxMDk2NzM0.YLKM8A.luvdBG1jhO4ssp6ykg-3_Opc-e0",
-  port: 8080
+  token: process.env.TOKEN,
+  port: 8080,
+  url: "bank-bot-1.coderkearns.repl.co"
 }
