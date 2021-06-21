@@ -1,15 +1,21 @@
 const util = require("../util")
 const { url } = require("../config")
 
-function createLink(message) {
-  return `https://${url}/${message.guild.id}/${message.author.id}/`
+function createLink(guild, user) {
+  return `https://${url}/${guild.id}/${user.id}/`
 }
 
 module.exports = {
   name: "link",
   description: "Get a link for yourself",
   execute({ message, args, client }) {
-    const link = createLink(message)
+    let user
+    if (args.length !== 0) {
+      user = util.getUserFromMention(client, args[0])
+    } else {
+      user = message.author
+    }
+    const link = createLink(message.guild, user)
     message.channel.send(link)
   },
 }
