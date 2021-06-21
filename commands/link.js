@@ -7,7 +7,7 @@ function createLink(guild, user) {
 
 module.exports = {
   name: "link",
-  description: "Get a link for yourself",
+  description: "Get a website link. Mention someone if you want their link instead.",
   execute({ message, args, client }) {
     let user
     if (args.length !== 0) {

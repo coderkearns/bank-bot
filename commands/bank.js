@@ -1,4 +1,5 @@
-const util = require("../util.js")
+const util = require("../util")
+const { color } = require("../config")
 
 module.exports = {
   name: "bank",
@@ -8,7 +9,7 @@ module.exports = {
     const bank = client.bank.get(key)
 
     const embed = {
-      color: 0xFFAC00,
+      color: color,
       title: `${message.author.tag}\'s Bank`,
       description: `Balance: ${bank.money}$`
     }
