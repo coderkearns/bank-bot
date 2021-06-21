@@ -8,7 +8,6 @@ function createLink(message) {
 module.exports = {
   name: "link",
   description: "Get a link for yourself",
-  cooldown: 30 * 60, // 30 minutes (60 seconds * 30)
   execute({ message, args, client }) {
     const link = createLink(message)
     message.channel.send(link)
