@@ -1,4 +1,5 @@
 const express = require("express")
+const client = require("../client")
 const Enmap = require("enmap")
 
 const app = express()
@@ -6,6 +7,10 @@ const app = express()
 app.use((req, res, next) => {
   req.db = new Enmap("bank", { dataDir: "./data" })
   next()
+})
+
+app.all("/ping", (req, res) => {
+  res.send(`${client.user.tag} is up and running!`)
 })
 
 app.get("/", (req, res) => {
