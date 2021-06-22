@@ -12,7 +12,6 @@
   "author": "Carter Kearns <coder.kearns@gmail.com> (https://github.com/coderkearns)",
   "license": "ISC",
   "dependencies": {
-    "canvas": "^2.8.0",
     "discord.js": "^12.5.3",
     "enmap": "^5.8.5",
     "express": "^4.17.1"
