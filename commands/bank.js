@@ -11,7 +11,7 @@ module.exports = {
     const embed = {
       color: color,
       title: `${message.author.tag}\'s Bank`,
-      description: `Balance: ${bank.money}$`
+      description: `Balance: ${bank.money}$`,
     }
     message.channel.send({ embed })
   },
